@@ -1,6 +1,7 @@
 #include <signal.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #define MAX_ID     3
 #define CHOISE_REQ "Make your choice:\n\t0 - rock\n\t1 - paper\n\t2 - scissors\nGive me a number: "
@@ -16,8 +17,7 @@ static void my_handler(int s)
 
 static unsigned int random_choice()
 {
-    // stub function
-    return 0;
+    return rand() % (MAX_ID);
 }
 
 static unsigned int get_user_input(char *request, unsigned int max_val)
@@ -40,14 +40,36 @@ static unsigned int get_user_input(char *request, unsigned int max_val)
 
 static char* get_result_str(unsigned int ai_choice, unsigned int user_choice)
 {
-    // stub function
-    return "Draw";
+    if (ai_choice == user_choice)
+        return "Draw";
+    switch (user_choice)
+    {
+        case 0:
+            return (ai_choice == 1) ? "Lose" : "Win";
+        case 1:
+            return (ai_choice == 2) ? "Lose" : "Win";
+        case 2:
+            return (ai_choice == 0) ? "Lose" : "Win";
+        default:
+            break;
+    }
+    return "Unknown result";
 }
 
 static char* get_name_by_id(unsigned int id)
 {
-    // stub function
-    return "rock";
+    switch (id)
+    {
+        case 0:
+            return "rock";
+        case 1:
+            return "paper";
+        case 2:
+            return "scissors";
+        default:
+            break;
+    }
+    return "unknown";
 }
 
 static int run_game(void)
