@@ -10,6 +10,8 @@ char *choiceConvertor(char gameChoice)
     return "scissors";
   if (gameChoice == 'p')
     return "paper";
+
+  return "paper";
 }
 
 char readUser()
@@ -21,9 +23,40 @@ char readUser()
   return user;
 }
 
+char getComputerChoice()
+{
+  static char arr[] = {'r', 'p', 's'};
+
+  srand(time(NULL));
+  int rnd = rand() % 3;
+
+  return arr[rnd];
+}
+
+void printGameResult(char userChoice, char computerChoice)
+{
+
+  printf("You choose %s, I choose %s\n",
+         choiceConvertor(userChoice), choiceConvertor(computerChoice));
+
+  if (userChoice == computerChoice)
+    printf("Draw!!!!\n");
+  else if ((userChoice == 'r') && (computerChoice == 's') ||
+           (userChoice == 's') && (computerChoice == 'p') ||
+           (userChoice == 'p') && (computerChoice == 'r'))
+    printf("You Win: %s beats %s!!! Great job.\n",
+           choiceConvertor(userChoice), choiceConvertor(computerChoice));
+  else
+    printf("You Lose: %s beats %s!!! Sorry, try again.\n",
+           choiceConvertor(userChoice), choiceConvertor(computerChoice));
+}
+
 int main(void)
 {
   char userChoice = readUser();
-  printf("User choice is: %s\n", choiceConvertor(userChoice));
+  char computerChoice = getComputerChoice();
+
+  printGameResult(userChoice, computerChoice);
+
   return 0;
 }
