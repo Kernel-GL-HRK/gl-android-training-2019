@@ -6,9 +6,10 @@ int main()
     char buff[100];
     int n;
     int a = rand() % 10;
+    int c = 3;
 
-    printf("I made a number from 0 to 10. Try to guess.\n");
-    for (;;)
+    printf("I made a number from 0 to 10. Try to guess. You have %d attempt(s).\n", c);
+    for (int i = 0; i < c; ++i)
     {
         printf("Please enter you number: ");
         const char *s = fgets(buff, sizeof(buff), stdin);
@@ -23,7 +24,7 @@ int main()
         if (n == a)
         {
             printf("Guessed. Goodby.\n");
-            break;
+            return 0;
         }
         if (n < a)
         {
@@ -36,5 +37,6 @@ int main()
             continue;
         }
     }
+    printf("Did not guessed. Goodby.\n");
     return 0;
 }
