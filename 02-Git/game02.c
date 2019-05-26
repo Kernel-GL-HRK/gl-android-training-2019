@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 #define RET_OK 	0
 #define RET_ERR 1
@@ -36,7 +38,17 @@ int main()
 //Returns a random value in the range from 'valFrom' to 'valTo'.
 int getProgNum(int valFrom, int valTo)
 {
-	return 0;
+	int ret;
+	
+	if (valFrom == valTo)
+	  return valFrom;
+
+	//Reset random sequence:
+	srand(time(NULL));
+	//Generate random number:
+	ret = rand() % (abs(valTo-valFrom)) + (valFrom<valTo ? valFrom : valTo);
+
+	return ret;
 }
 
 
