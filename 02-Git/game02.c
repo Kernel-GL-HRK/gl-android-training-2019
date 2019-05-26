@@ -31,6 +31,7 @@ int main()
 	}
 
 	//Here check the input value and print the game result:
+	printf("\nI thought of the number %d. You %s !\n\n", progNum, progNum == userNum ? "WON" : "LOSE");	
 
 	return RET_OK;
 }
