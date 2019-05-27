@@ -25,6 +25,6 @@ int main(int argc, char *argv[])
 		answer = argv[1];
 	}
 
-	printf("%s\r\n", !strcmp(answer, guess) ? "Bingo" : "Missed");
+	printf("%s ('%s' vs '%s')\r\n", !strcmp(answer, guess) ? "Bingo" : "Missed", guess, answer);
 	return 0;
 }
