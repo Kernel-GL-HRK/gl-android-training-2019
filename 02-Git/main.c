@@ -32,7 +32,7 @@ enum {
     DRAW,
 };
 
-
+void print_controls(void);
 unsigned char get_choice(unsigned char *choice);
 void do_game(unsigned char *choice);
 char *get_item_name(char *choice);
@@ -43,6 +43,7 @@ int main(int argc, char const *argv[])
     unsigned char choice;
 
     printf("*** A Rock–paper–scissors game***\n");
+    print_controls();
 
     do
     {
@@ -56,6 +57,14 @@ int main(int argc, char const *argv[])
     
     printf("Bye-bye!!!\n\n");
     return 0;
+}
+
+void print_controls(void)
+{
+    printf("The control is: %s-%c, %s-%c, %s-%c, Exit-%c \n\n", \
+     ROCK_STR, ROCK_KEY, PAPER_STR, PAPER_KEY, SCISSORS_STR, SCISSORS_KEY, EXIT_KEY);
+
+    return;
 }
 
 unsigned char get_choice(unsigned char *choice)
