@@ -11,21 +11,13 @@ static const char *colors[] = {
 	"Blue",
 	"Purple",
 	"",
-	NULL,
 };
 
-static unsigned get_colors_size(const char *colors[])
-{
-	unsigned rv = 0;
-
-	for (const char **p = colors; *p; p++, rv++);
-
-	return rv;
-}
+#define ARRAY_SIZE(x) (sizeof(x) / sizeof((x)[0]))
 
 int main(int argc, char *argv[])
 {
-	unsigned color_idx = rand() % get_colors_size(colors);
+	unsigned color_idx = rand() % ARRAY_SIZE(colors);
 	char *answer = "";
 	const char *guess = colors[color_idx];
 
