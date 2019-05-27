@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 static const char *colors[] = {
 	"Red",
@@ -17,6 +18,8 @@ static const char *colors[] = {
 
 int main(int argc, char *argv[])
 {
+	srand(time(NULL));
+
 	unsigned color_idx = rand() % ARRAY_SIZE(colors);
 	char *answer = "";
 	const char *guess = colors[color_idx];
