@@ -12,3 +12,6 @@ color-quiz: $(OBJ)
 
 %.o: %.c
 	$(CC) -c $< -o $@
+
+clean:
+	rm -f $(OBJ) color-quiz
