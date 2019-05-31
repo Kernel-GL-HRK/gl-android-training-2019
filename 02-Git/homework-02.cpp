@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 #define MAX_ATTEMPTS_NUMBER 3
@@ -8,6 +10,10 @@ int main(int argc, char **argv) {
     bool result = false;
 
     cout << "Lets play the game!!!" << endl;
+
+    /* Init random genetator */
+    std::srand(std::time(0));
+    int random_variable = std::rand() % 10;
 
     while (false == exit) {
         char number = '0';
@@ -19,7 +25,7 @@ int main(int argc, char **argv) {
         attempts--;
 
         /* Checking result here */
-        if ('0' == number) {
+        if (random_variable == number - '0') {
             result = true;
             exit = true;
         } else if (attempts > 0) {
