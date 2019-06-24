@@ -7,12 +7,12 @@ public class MyServiceImpl extends IMyService.Stub{
     private static final String LOG_TAG = "xan_mySrvc";
 
     public void setValue (int newValue) {
-        Log.i(LOG_TAG, "onSetValue()" + newValue);
+        Log.i(LOG_TAG, "onSetValue() " + newValue);
         mValue = newValue;
     }
 
     public int getValue () {
-        Log.i(LOG_TAG, "onGetValue()" + mValue);
+        Log.i(LOG_TAG, "onGetValue() " + mValue);
         return mValue;
     }
 
