@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GetterApp</string>
+    <string name="btn_get_value_name">Get Value</string>
+    <string name="txt_value_def">Unknown</string>
+</resources>
