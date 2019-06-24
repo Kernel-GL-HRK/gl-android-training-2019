@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SetterApp</string>
+    <string name="btn_set_name">Set Value</string>
+</resources>
