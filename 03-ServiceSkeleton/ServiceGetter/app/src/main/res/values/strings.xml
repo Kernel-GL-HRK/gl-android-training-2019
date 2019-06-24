@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ServiceGetter</string>
+    <string name="get_value">Get</string>
+    <string name="no_data">No Data</string>
+</resources>
