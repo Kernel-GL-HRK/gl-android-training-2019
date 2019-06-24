@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestService</string>
+    <string name="btnStartSrvName">Start Service</string>
 </resources>
