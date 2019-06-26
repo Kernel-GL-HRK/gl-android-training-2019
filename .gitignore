@@ -1,0 +1,14 @@
+/03-ServicePractice/ValueService/*.iml
+/03-ServicePractice/ValueService/.idea/*
+/03-ServicePractice/ValueService/.gradle
+/03-ServicePractice/ValueService/local.properties
+/03-ServicePractice/ValueService/.idea/caches
+/03-ServicePractice/ValueService/.idea/libraries
+/03-ServicePractice/ValueService/.idea/modules.xml
+/03-ServicePractice/ValueService/.idea/workspace.xml
+/03-ServicePractice/ValueService/.idea/navEditor.xml
+/03-ServicePractice/ValueService/.idea/assetWizardSettings.xml
+/03-ServicePractice/ValueService/.DS_Store
+/03-ServicePractice/ValueService/build
+/03-ServicePractice/ValueService/captures
+/03-ServicePractice/ValueService/.externalNativeBuild
