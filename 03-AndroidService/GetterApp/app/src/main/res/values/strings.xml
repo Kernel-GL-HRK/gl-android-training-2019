@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GetterApp</string>
+    <string name="get_value">Get Value</string>
+</resources>
