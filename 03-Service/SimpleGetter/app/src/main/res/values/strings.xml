@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleGetter</string>
+    <string name="get_button">Get value</string>
+</resources>
