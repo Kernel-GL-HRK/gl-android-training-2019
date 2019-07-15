@@ -1,0 +1,24 @@
+package vendor.gl.hardware.ledcontrol@1.0;
+
+enum Result : uint32_t {
+    ERR_OK = 0,
+    ERR_FAULT = 1,
+};
+
+/**
+ * Leds
+ */
+enum Led : uint32_t {
+    GREEN_LED_1 = 1,
+    GREEN_LED_2 = 2,
+    GREEN_LED_3 = 3,
+    GREEN_LED_4 = 4,
+};
+
+/**
+ * Led states
+ */
+enum State : uint32_t {
+    STATE_OFF = 0,
+    STATE_ON  = 1,
+};

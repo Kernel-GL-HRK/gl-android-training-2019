@@ -1,0 +1,19 @@
+hidl_interface {
+    name: "vendor.gl.hardware.ledcontrol@1.0",
+    root: "vendor.gl.hardware",
+    srcs: [
+        "types.hal",
+        "ILedControl.hal",
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+    ],
+    types: [
+        "Result",
+        "Led",
+        "State",
+    ],
+    gen_java: true,
+    gen_java_constants: true,
+}
+

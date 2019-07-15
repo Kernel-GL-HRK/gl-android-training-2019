@@ -1,0 +1,17 @@
+service vendor.gl.hardware.ledcontrol-1-0 /vendor/bin/hw/vendor.gl.hardware.ledcontrol@1.0-service
+    interface vendor.gl.hardware.ledcontrol@1.0::ILedControl default
+    class hal
+    user system
+    group system
+    oneshot
+    #disabled
+
+on early-boot
+    chown system system /sys/class/leds/user_led1/brightness
+    chown system system /sys/class/leds/user_led1/trigger
+    chown system system /sys/class/leds/user_led2/brightness
+    chown system system /sys/class/leds/user_led2/trigger
+    chown system system /sys/class/leds/user_led3/brightness
+    chown system system /sys/class/leds/user_led3/trigger
+    chown system system /sys/class/leds/user_led4/brightness
+    chown system system /sys/class/leds/user_led4/trigger
