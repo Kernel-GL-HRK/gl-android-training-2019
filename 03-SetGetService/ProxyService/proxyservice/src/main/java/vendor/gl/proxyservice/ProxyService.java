@@ -25,6 +25,14 @@ public class ProxyService extends Service {
     }
 
     @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        super.onStartCommand(intent, flags, startId);
+        Log.i(TAG, "onStartCommand()");
+
+        return START_STICKY;
+    }
+
+    @Override
     public IBinder onBind(Intent intent) {
         Log.i(TAG, "onBind()");
         return mBinder = new IProxyService.Stub() {
