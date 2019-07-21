@@ -1,0 +1,17 @@
+cc_binary {
+    name: "vendor.bksnake.smartledcontroller@1.0-service.hikey960",
+    init_rc: ["vendor.bksnake.smartledcontroller@1.0-service.hikey960.rc"],
+    relative_install_path: "hw",
+    vendor: true,
+    srcs: [
+        "LedController.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "liblog",
+        "vendor.bksnake.smartledcontroller@1.0",
+    ],
+}
