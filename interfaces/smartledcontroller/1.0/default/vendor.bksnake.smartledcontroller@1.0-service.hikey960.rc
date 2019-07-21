@@ -9,3 +9,13 @@ service vendor.bksnake.smartledcontroller-1-0 /system/vendor/bin/hw/vendor.bksna
     
     # will only be started when requested
     disabled
+
+on early-boot
+    chown system system /sys/class/leds/user_led1/brightness
+    chown system system /sys/class/leds/user_led1/trigger
+    chown system system /sys/class/leds/user_led2/brightness
+    chown system system /sys/class/leds/user_led2/trigger
+    chown system system /sys/class/leds/user_led3/brightness
+    chown system system /sys/class/leds/user_led3/trigger
+    chown system system /sys/class/leds/user_led4/brightness
+    chown system system /sys/class/leds/user_led4/trigger
