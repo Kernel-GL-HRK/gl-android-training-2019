@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".GetterActivity">
+
+    <Button
+        android:id="@+id/service_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Connect"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Get"
+        app:layout_constraintEnd_toEndOf="@+id/service_connect"
+        app:layout_constraintStart_toStartOf="@+id/service_connect"
+        app:layout_constraintTop_toBottomOf="@+id/service_connect" />
+
+    <TextView
+        android:id="@+id/text_value"
+        android:layout_width="97dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_get"
+        app:layout_constraintStart_toEndOf="@+id/button_get"
+        app:layout_constraintTop_toTopOf="@+id/button_get" />
+
+</android.support.constraint.ConstraintLayout>
