@@ -17,6 +17,11 @@ public:
 	Return<int32_t> initilizeLedController(void) override;
 	Return<int32_t> terminateLedController(void) override;
 	Return<int32_t> setLedState(Leds led, LedState state) override;
+
+private:
+	bool writeLedTrigger(Leds led, const std::string& trigger);
+	bool writeLedBright(Leds led, LedState state);
+	std::string ledPathGenerator(Leds led, std::string&& file_name);
 };
 
 } // namespace V1_0
