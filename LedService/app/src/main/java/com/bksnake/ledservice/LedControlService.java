@@ -29,4 +29,13 @@ public class LedControlService extends Service {
         Log.d(LOG_TAG, "-> onBind()");
         return mBinder;
     }
+
+    @Override
+    public void onDestroy() {
+        Log.d(LOG_TAG, "-> onDestroy()");
+        if (mBinder != null) {
+            ((LedControlServiceImpl)mBinder).terminate();
+        }
+        super.onDestroy();
+    }
 }
