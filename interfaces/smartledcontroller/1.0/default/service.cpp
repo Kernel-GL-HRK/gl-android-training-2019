@@ -26,7 +26,7 @@ int main(int /* argc */, char* /* argv */ []) {
         ALOGE("Could not register ledcontroller 1.0 service.");
         return 1;
     } else {
-    	ALOGE("ILedController registred.");
+    	ALOGI("ILedController registred.");
     }
     joinRpcThreadpool();
 
