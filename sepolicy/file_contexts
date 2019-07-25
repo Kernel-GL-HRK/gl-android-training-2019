@@ -1,0 +1,1 @@
+/(vendor|system/vendor)/bin/hw/vendor\.bksnake\.smartledcontroller@1\.0-service\.hikey960 u:object_r:hal_ledcontroller_default_exec:s0
