@@ -6,10 +6,13 @@ PRODUCT_PACKAGES +=\
 	LedController\
 
 DEVICE_MANIFEST_FILE += \
-    vendor/bksnake/config/manifest.xml
+    vendor/bksnake/config/manifest.xml\
 
 DEVICE_MATRIX_FILE += \
-    vendor/bksnake/config/compatibility_matrix.xml
+    vendor/bksnake/config/compatibility_matrix.xml\
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/bksnake/sepolicy
+    vendor/bksnake/sepolicy\
+
+TARGET_FS_CONFIG_GEN +=\
+	vendor/bksnake/config/config.fs

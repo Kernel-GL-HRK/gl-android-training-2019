@@ -1,0 +1,16 @@
+type ledcontroller_app, domain, halclientdomain;
+app_domain(ledcontroller_app)
+
+allow ledcontroller_app activity_service:service_manager find;
+allow ledcontroller_app connectivity_service:service_manager find;
+allow ledcontroller_app display_service:service_manager find;
+allow ledcontroller_app network_management_service:service_manager find;
+allow ledcontroller_app surfaceflinger_service:service_manager find;
+allow ledcontroller_app audio_service:service_manager find;
+
+allow ledcontroller_app app_data_file:dir { search };
+allow ledcontroller_app ledcontroller_app_data:dir { search getattr write add_name create open read setattr };
+allow ledcontroller_app ledcontroller_app_data:file { getattr write create open read setattr };
+
+allow ledcontroller_app hal_ledcontroller_default:binder { call };
+allow ledcontroller_app hal_ledcontroller_service:hwservice_manager { find };
