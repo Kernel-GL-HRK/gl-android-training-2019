@@ -1,0 +1,1 @@
+allow installd ledcontroller_app_data:dir { relabelto rw_dir_perms setattr rmdir };

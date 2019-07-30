@@ -1,0 +1,21 @@
+service vendor.bksnake.smartledcontroller-1-0 /system/vendor/bin/hw/vendor.bksnake.smartledcontroller@1.0-service.hikey960
+    interface vendor.bksnake.smartledcontroller@1.0::ILedController default
+    class hal
+    user vendor_ledcontroller
+    group vendor_ledcontroller
+    
+    # will not be restarted if it exits until it is requested to be restarted
+    oneshot
+    
+    # will only be started when requested
+    disabled
+
+on early-boot
+    chown vendor_ledcontroller vendor_ledcontroller /sys/class/leds/user_led1/brightness
+    chown vendor_ledcontroller vendor_ledcontroller /sys/class/leds/user_led1/trigger
+    chown vendor_ledcontroller vendor_ledcontroller /sys/class/leds/user_led2/brightness
+    chown vendor_ledcontroller vendor_ledcontroller /sys/class/leds/user_led2/trigger
+    chown vendor_ledcontroller vendor_ledcontroller /sys/class/leds/user_led3/brightness
+    chown vendor_ledcontroller vendor_ledcontroller /sys/class/leds/user_led3/trigger
+    chown vendor_ledcontroller vendor_ledcontroller /sys/class/leds/user_led4/brightness
+    chown vendor_ledcontroller vendor_ledcontroller /sys/class/leds/user_led4/trigger

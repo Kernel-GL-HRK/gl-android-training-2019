@@ -1,0 +1,2 @@
+type hal_ledcontroller_default_exec, exec_type, vendor_file_type, file_type;
+type ledcontroller_app_data, file_type;

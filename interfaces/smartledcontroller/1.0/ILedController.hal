@@ -1,0 +1,32 @@
+/*
+*  bksnake. 2019
+*/
+
+package vendor.bksnake.smartledcontroller@1.0;
+
+/**
+* Ledcontrol Interface
+*/
+interface ILedController {
+
+	/**
+	* LedController init
+	*
+	* @return result 0 if successful, nonzero otherwise
+	*/
+	initilizeLedController() generates (int32_t result);
+
+	/**
+	* LedController setLedState
+	*
+	* @return result 0 if successful, nonzero otherwise
+	*/
+	setLedState(Leds led, LedState state) generates (int32_t result);
+
+	/**
+	* LedController terminate
+	*
+	* @return result 0 if successful, nonzero otherwise
+	*/
+	terminateLedController() generates (int32_t result);
+};

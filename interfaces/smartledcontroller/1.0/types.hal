@@ -1,0 +1,17 @@
+/*
+*  bksnake. 2019
+*/
+
+package vendor.bksnake.smartledcontroller@1.0;
+
+enum LedState : uint8_t {
+	LED_STATE_OFF = 0,
+	LED_STATE_ON
+};
+
+enum Leds : uint8_t {
+	LED_GREEN_1 = 1,
+	LED_GREEN_2,
+	LED_GREEN_3,
+	LED_GREEN_4,
+};
