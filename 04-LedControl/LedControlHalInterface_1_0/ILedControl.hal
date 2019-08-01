@@ -1,0 +1,8 @@
+package vendor.gl.hardware.ledcontrol@1.0;
+
+interface ILedControl {
+    /**
+     * Control led state
+     */
+    setLedState(Led led, State state) generates (Result result);
+};

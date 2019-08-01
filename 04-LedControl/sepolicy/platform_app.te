@@ -1,0 +1,2 @@
+allow platform_app hal_ledcontrol_hwservice:hwservice_manager { find };
+allow platform_app hal_ledcontrol_default:binder { call };

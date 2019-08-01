@@ -1,0 +1,1 @@
+/(vendor|system/vendor)/bin/hw/vendor\.gl\.hardware\.ledcontrol@1\.0-service u:object_r:hal_ledcontrol_default_exec:s0

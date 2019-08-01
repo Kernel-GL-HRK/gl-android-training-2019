@@ -1,0 +1,9 @@
+type hal_ledcontrol_default, domain, halserverdomain;
+
+init_daemon_domain(hal_ledcontrol_default)
+
+allow hal_ledcontrol_default hidl_base_hwservice:hwservice_manager { add };
+allow hal_ledcontrol_default hal_ledcontrol_hwservice:hwservice_manager { add };
+
+allow hal_ledcontrol_default sysfs_leds:dir { search };
+allow hal_ledcontrol_default sysfs:file { open write getattr };
